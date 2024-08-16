@@ -1,0 +1,115 @@
+
+
+    
+    .all-blogs{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .user-blog{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 2px;
+        margin: 30px;
+        gap: 10px;
+        box-shadow: 0 2px 5px rgba(227, 14, 96, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 10px;
+    }
+    
+    .aa-title 
+    {
+        margin-left: 15px;
+        font-size: 20px;
+        width: 370px;
+        color: #141A28;
+        text-decoration: none;
+        transition-property: all;
+        transition-duration: 0.5s;
+        transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+
+    
+    }
+    
+    .aa-title:hover{
+                               color: #0073ff;
+    }
+    
+    .user-blog:hover {
+        transform: scale(1.08);
+        box-shadow: 0 4px 10px rgba(39, 14, 227, 0.3); 
+    }
+    
+    .aa-img{
+    width: 380px;
+    height: 280px;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(227, 14, 96, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    }
+    
+    .user-blog img:hover {
+       
+        box-shadow: 0 4px 10px rgba(39, 14, 227, 0.3); 
+    } 
+    
+    .aa-like-comment{
+        display: flex;
+        flex-wrap:wrap;
+        margin: 20px;
+        justify-content:space-between;
+        gap: 30px;
+        cursor: pointer;
+        width: 370px;
+    }
+    .aa-like-comment i {
+        color: #141A28;
+      }
+    
+  
+    
+      .vi-allblogs-heading{
+
+         font-size: 50px;
+         align-content: center;
+         text-align: center;
+      }
+
+
+
+      .aa-like-p{
+
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                              gap: 10px;
+                           
+
+      }
+      .aa-comment-p{
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+          gap: 10px;
+       
+
+}
+  .an-alllike-span{
+                          font-weight: bolder;
+                          font-size: 20px;
+}
+
+
+.an-allcomment-span{
+        font-weight: bolder;
+        font-size: 20px;
+}

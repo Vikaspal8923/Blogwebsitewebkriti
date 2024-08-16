@@ -1,0 +1,229 @@
+
+
+
+#vi-preview-title{
+
+    padding-left: 30px;
+    font-size: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+            margin-bottom: 15px;
+}
+
+#vi-preview-content{
+     
+          padding-left: 30px;
+
+}
+
+#vi-preview-content p img{
+     
+               
+    display: block;
+    margin: 0 auto;
+    max-width: 100%; 
+
+
+
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 2px solid #080808;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+  }
+  .loader::after,
+  .loader::before {
+    content: '';  
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #FF3D00;
+    width: 6px;
+    height: 6px;
+    transform: translate(150%, 150%);
+    border-radius: 50%;
+  }
+  .loader::before {
+    left: auto;
+    top: auto;
+    right: 0;
+    bottom: 0;
+    transform: translate(-150%, -150%);
+  }
+  
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } 
+
+
+  .an-like-comment-publish{
+
+                   display:  flex;
+                   flex-direction: row;
+                   width: 100%;
+                   justify-content: space-between;
+                   align-items: center;
+
+
+  }
+
+  .an-like-comment{
+         margin-left: 45px;            
+    display:  flex;
+    flex-direction: row;
+  gap: 75px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 25px;
+    cursor: pointer;
+  }
+
+  .an-publish-update{
+                            
+    display:  flex;
+    flex-direction: row;
+     gap: 35px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+  .an-publish{
+                            font-size: 20px;
+                            font-weight: 600;
+  }
+
+  .an-update{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+
+/* coment box */
+
+.an-main-commentbox{
+    
+    margin: 20px;
+}
+
+.an-main-commentbox1{
+  margin: 20px;
+  margin-bottom: 40px;
+  display: none;
+  
+}
+
+.an-comment-form{
+                       display: flex;
+                       flex-direction: row;
+                       justify-content: center;
+                       align-items: center;
+                       gap: 20px;
+}
+
+.an-comment-input{         
+                         border-radius: 20px;
+                         width: 320px;
+                         padding: 10px;
+                         font-size: 20px;
+}
+
+.an-addcomemnt-box{
+   padding-top: 10px;
+   padding-bottom: 10px;
+  display: inline-block;
+  margin-left: 4px;
+
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #53AA51; 
+  border: 2px solid #53AA51; 
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;       
+
+         
+}
+
+.an-addcomemnt-box:hover{
+               
+  background-color: #236521; 
+  border-color: #0056b3;
+}
+
+.an-addcomemnt-box:focus{
+  outline: none; 
+  box-shadow: 0 0 0 3px #2f6d2e;
+}
+
+.an-addcomemnt-box:active{
+  background-color: #236521; 
+  border-color: #236521;
+}
+
+
+
+.an-one-comment{
+                      
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: start;
+                  padding-left: 40px;
+                  border-left: 2px solid rgba(189, 189, 189, 0.388);
+}
+
+.an-comment-img-name{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start; 
+    gap: 5px;
+}
+
+.an-comment-img{
+                     width: 30px;
+                     height: 30px;
+                     border-radius: 50%;
+}
+.an-comment-p{
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+                  font-size: 22px;  
+                  color: #080808;
+}
+.an-comment-byusers{
+                          display: flex;
+                          flex-direction: column;
+                          justify-content: center;
+                          align-items: start;
+}
+
+.an-realcomment{
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+
+                        color: rgb(61, 58, 58);
+}
+
+.an-main-commentbox2{
+                                   display: flex;
+                                   flex-direction: column;
+                                   gap: 30px;
+}

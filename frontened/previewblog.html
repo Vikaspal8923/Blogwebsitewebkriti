@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>preview blog</title>
+    <link href="preview.css" rel="stylesheet" >
+    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
+    <link href="style.css" rel="stylesheet" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
+</head>
+<body >
+
+
+                <header class=" header-part">
+
+        <div class="header-logo">
+            <img class="logo-image" src="bloglogo.png" alt="Logo">
+            <p class="blogwebsitname">BlogFusion</p>
+        </div>
+
+    
+        <nav class="header-navbar">
+
+          <div>
+            <a class="navbar-parts1" href="index.html">Home</a>
+          </div>
+           
+           <div>
+            <a class="navbar-parts2" href="aboutus.html">About</a>
+
+           </div>
+            
+            <div>
+                <a  class="navbar-parts3" href="blog.html">Blogs</a>
+            </div>
+            
+             <div>
+                <a class="navbar-parts4" href="quill.html">Publish Blog</a>
+             </div>
+            
+        </nav>
+         
+          
+        <div class="auth-buttons">
+                     
+                   <div class="search-section">
+                          <div class="searchbox-div"> 
+                                    <input id="searchbox" type="search"></input>
+                          </div>
+                    <i id="search-icon" class="fa-solid fa-magnifying-glass"></i>
+
+                   </div>
+                 
+                   <div class="aa-all-search-blog">
+
+                    <!-- <button class="close-button">
+                      close
+                    </button> -->
+
+                   </div>
+
+                <div class="login-signup-button">  
+
+                    <button id="loginbutton" class="loginbutton">Login</button>
+                    <button id="signupbutton" class="signupbutton">Sign up</button>
+
+                </div>
+             
+                 <div class="profile-section" >
+
+                          <button class="drop-down">
+
+                          
+                          <img  class="profile-image" alt="profileimage">
+
+
+                          <div>
+                            <i id="drop-down-icon" class="fa-solid fa-caret-down"></i>
+                          </div> 
+
+                          <div class="dashboard-logout">
+                                                      <a class="dashboard-button" >
+                                                        <i class="fa-solid fa-gauge"></i>
+                                                        Dashboard</a>
+                                                       <div class="logout-button">
+                                                        <i class="fa-solid fa-right-from-bracket"></i>
+                                                        Logout</div>
+                           </div>
+
+                                        
+
+                        </button>
+                                
+                                                  
+                                              
+                                 
+                           
+                 </div>
+
+                    
+        </div>
+
+           
+                </header>
+
+                <div class="main-auth-section">
+                    <div class="main-body">
+                         <div class="main-auth" >
+                        
+    
+                            <div  id="login" style="width: 100%; flex-direction: column; justify-content: center; align-items: center;">
+  
+                              <div id="hide-login-signup" >
+                                        
+                                <i id="hide-login-icon" style=" cursor: pointer;  font-size: 30px; font-weight: bolder; color: red;" class="fa-solid fa-xmark"></i>
+                                          
+        
+                              </div>
+                                   <div class="header-logo2">
+                                          <img class="logo-image2" src="bloglogo.png" alt="Logo">
+                                          <p class="blogwebsitname2">BlogFusion</p>
+                                   </div>
+               
+                                  <div class="login-div-one">Welcome back to Bloggr</div> 
+  
+                   
+  
+                                 <div class="login-div-two">
+                                                 <form class=" login-form">
+                                            
+                                                 <div class="login-form-div-one">
+                                                            <label class="form-label-one" for="email" >Email</label>
+                                                            <input class="loginemail" type="text" id="email" name="email" placeholder="Enter your email" required  >
+                                                 </div>
+  
+                                                 <div class="login-form-div-two"> 
+                                                            <label  class="form-label-two" for="password" >Password</label>
+                                                            <input class="loginpassword" type="text" id="password" name="password" placeholder="Enter your password" required  >
+                                                 </div>
+                                                  <div class="login-form-div-three">
+                                                            <button type="button" class="forgot-button">Forget_password?</button>
+                                                            <button type="submit" id="signupbutton2" class="forgot-button">Sign up</button>
+                                                            
+                                                  </div>
+  
+                                                  <button  class="login-form-button" type="submit">Sign In</button>
+                                               
+                                                  </form>
+  
+  
+  
+                                   
+                                    </div>
+  
+                            </div>
+                   
+               
+                      
+                            <div id="signup" style="width: 100%; flex-direction: column; justify-content: center; align-items: center;" >
+  
+                 
+         
+                     <!-- <div class="header-logo2">
+                         <img class="logo-image2" src="bloglogo.png" alt="Logo">
+                         <p class="blogwebsitname2">BlogFusion</p>
+                     </div> -->
+                         <div id="hide-login-signup" >
+                                        
+                          <i id="hide-signup-icon" style=" cursor: pointer; font-size: 30px; font-weight: bold; color: red;" class="fa-solid fa-xmark"></i>
+                                    
+  
+                         </div>
+                       <div class="signup-div-one">Be a Voice in Our Blogging Community: Register Now!</div> 
+   
+                  
+   
+                       <div class="signup-div-two">
+                                      <form class="signup-form">   
+  
+                                                      <div class="signup-firstname-lastname">
+  
+                                                         <div class="signup-form-firstname">
+                                                             <label class="form-label-one"  for="firstname" >Firstname</label>
+                                                             <input type="text" id="firstname" name="firstname" placeholder="Enter your firstname" required  >
+                                                         </div>
+  
+                                                          <div class="signup-form-lastname"> 
+                                                             <label id="signuplastname" class="form-label-two" for="lastname" >Lastname</label>
+                                                             <input type="text" id="lastname" name="lastname" placeholder="Enter your lastname" required  >
+                                                           </div>
+                                                      </div>
+  
+                                                      <div class="signup-form-div-two">
+                                                         <label class="form-label-one" for="email" >Email</label>
+                                                         <input class="signupemail" type="text" id="email" name="email" placeholder="Enter your email" required  >
+                                                     </div>
+  
+                                                     <div class="signup-form-div-three">
+                                                         <label class="form-label-one" for="mobilenumber" >Mobile number</label>
+                                                         <input type="text" id="mobilenumber" name="mobilenumber" placeholder="Enter your mobile number" required  >
+                                                     </div>
+  
+                                                     <div class="signup-password-confirm">
+                                                         <div class="signup-form-password">
+                                                             <label class="form-label-one" for="signpassword" >Password</label>
+                                                             <input type="text" id="signpassword" name="password" placeholder="Enter password" required >
+                                                         </div>
+  
+                                                         <div class="signup-form-confirm">
+                                                             <label id="signupconfirmpassword" class="form-label-one" for="confirmpassword" > Confirm password</label>
+                                                             <input type="text" id="confirmpassword" name="confirmpassword" placeholder="Enter confirm password" required  >
+                                                         </div>
+                                                     </div>
+  
+  
+                                                       
+  
+                                                  
+                                                   
+                                                     <div class="signup-form-div-login" style=" display: flex; flex-direction: row; justify-content: end;">
+                                                   
+                                                      <button type="button" id="loginbutton2" class="forgot-button">Login</button>
+                                                      
+                                                     </div>
+                                                    <button   class="signup-form-button" type="submit">Create Account</button>
+                                                 
+                                      </form>
+   
+   
+   
+                                     
+                       </div>
+  
+   
+                            </div>
+  
+  
+                            <div class="otp-container" id="otp-container">
+  
+                              <div id="hide-verify-email" >
+                                        
+                                <i id="hide-email-icon" style=" cursor: pointer; font-size: 30px; font-weight: bold; color: red;" class="fa-solid fa-xmark"></i>
+                                          
+        
+                               </div>
+                                <div class="verify-email-div">  Verify email </div>
+  
+                                <div  class="verify-email-title"> Enter the 6-digit verification code that was sent to your email.
+  
+                                </div>
+                              
+  
+                              <div class="inputfield">
+                                <input type="number" maxlength="1" class="input" disabled />
+                                <input type="number" maxlength="1" class="input" disabled />
+                                <input type="number" maxlength="1" class="input" disabled />
+                                <input type="number" maxlength="1" class="input" disabled />
+                                <input type="number" maxlength="1" class="input" disabled />
+                                <input type="number" maxlength="1" class="input" disabled />
+                               
+                              </div>
+                                      <div style="width: 100%;">
+                                              <button   class="verify-email-button">Verify email</button>
+                                      </div>
+                            </div>
+  
+                          </div>
+  
+                   </div>   
+  
+                </div>
+                    
+                
+                <div style=" width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+
+                  <div style=" margin: 40px; width: 100%; display: flex;  text-align: center;"> <span class="loader"></span> </div>
+
+                <div class="blogcontentappear" style=" width: 75%; display: none; flex-direction: column; justify-content: center; align-items: start;">
+                  
+                   <div  style=" background-color: #ffffff; padding-top: 45px; padding-bottom: 30px; border-radius: 35px; margin-bottom: 50px;  gap: 15px ; display: flex; width: 100%; flex-direction: column; justify-content: center; align-items: center; "  class="vi-profile">
+                                 
+                                    <img style=" width: 100px; height: 100px; border-radius: 50%;"  class="vi-profile-image" alt="author image ">
+                                    <p  style="  margin-block-start: 0em; margin-block-end: 0em; font-size: 20px; color: #7E7F81;;">Author</p>
+                                    <p style=" cursor: pointer; margin-top: -30px;  margin-block-start: 0em; margin-block-end: 0em; font-size: 35px; color: #141A28" class="vi-authorname">XYZ_NAME</p>
+                                    
+                                    <p style=" margin-block-start: 0em; margin-block-end: 0em; font-size: 20px; width: 500px; text-align:  center; color: #7E7F81;" class="vi-author-desc">An avid writer with a passion for sharing insights knowledge and brings a unique perspective to the world of blogging.</p>
+                                    
+                                    
+                                  
+                   </div>
+
+                  <div id="vi-preview-title">
+                        
+                           
+                  </div>
+              
+                  <div style=" margin-left: 30px; width: 100%; height: 2px; background-color: rgba(189, 189, 189, 0.388);">
+
+                  </div>
+           
+                  <div id="vi-preview-content"  class="ql-editor" >
+                 
+                 </div>
+
+                 <div style=" margin-left: 30px; width: 100%; height: 2px; background-color: rgba(189, 189, 189, 0.388);">
+                 </div>
+
+                 <div class=" an-like-comment-publish " style="height:  70px;">
+
+                               <div class="an-like-comment">
+                           
+                                 <p>
+                                       
+                                  <i id="vi-like-icon"   class=" fa-solid fa-thumbs-up"></i>
+                                   <span class="an-alllike-span"></span>
+                                </p>
+
+                                <p>
+
+                                  <i id="vi-comment-icon"  class=" fa-solid fa-comment"></i>
+                                  <span class="an-allcomment-span"></span>
+                                </p>
+                                <p>
+                                  <span class="an-allviews-span"></span>
+                                </p>
+
+
+                              </div>
+
+                              <div class="an-publish-update">
+                           
+                                     <p  class="an-publish" >Published on : 25 march 2024</p>
+                                     <p class="an-update">Last updated : 25 march 2024</p>
+                               
+
+                            </div>
+                 </div>
+                
+                 <div style=" margin-bottom: 10px; margin-left: 30px; width: 100%; height: 2px; background-color: rgba(189, 189, 189, 0.388);">
+                </div> 
+
+                     <div class="an-main-commentbox">
+                                  
+                                <div class="an-main-commentbox1">
+                                      <form class="an-comment-form">
+
+                                    
+                                      <input class="an-comment-input" type="text" placeholder="Enter your comment" required >
+                                      <button class="an-addcomemnt-box" type="submit">Add Comment</button>
+
+                                  </form>
+
+                                </div>
+
+                                  <div class="an-main-commentbox2">
+
+                                
+                                                
+                                    
+
+
+
+                                </div>
+
+                     </div>
+           
+                </div>
+
+              </div>
+
+
+
+               <div class="home-footer">
+                <div class="footer">
+
+                 <div class="footer-row">
+    
+            <div class="footer-col">
+              <h4 style="font-family: sans-serif; font-weight: bold; font-size: 25px;">Info</h4>
+              <ul class="links">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Compressions</a></li>
+                <li><a href="#">Customers</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Collection</a></li>
+                <li><a href="#">pricing</a></li>
+              </ul>
+            </div>
+    
+            <div class="footer-col">
+              <h4 style="font-family: sans-serif; font-weight: bold; font-size: 25px;">Explore</h4>
+              <ul class="links">
+                <li><a href="#">Free Designs</a></li>
+                <li><a href="#">Latest Designs</a></li>
+                <li><a href="#">Themes</a></li>
+                <li><a href="#">Popular Designs</a></li>
+                <li><a href="#">Art Skills</a></li>
+                <li><a href="#">New Uploads</a></li>
+                <li><a href="#">old uploads</a></li>
+              </ul>
+            </div>
+    
+            <div class="footer-col">
+              <h4 style="font-family: sans-serif; font-weight: bold; font-size: 25px;">Legal</h4>
+              <ul class="links">
+                <li><a href="#">Customer Agreement</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">GDPR</a></li>
+                <li><a href="#">Security</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Media Kit</a></li>
+              </ul>
+            </div>
+    
+            <div class="footer-col">
+              <h4 style="font-family: sans-serif; font-weight: bold; font-size: 25px;"> contact us</h4>
+              <p>
+                welcome to BlogFusion,
+                your number 1 source blogging 
+                with an emphasis on quality, reliability, and uniqueness
+    
+              </p>
+              <p>
+                <i class="fa-solid fa-map-marker-alt"></i> Morena link Road ,Gwalior ,Madhya Pradesh
+                
+              </p>
+              
+              
+              <div>
+                <input class="mail" type="text" placeholder="Your email" required>
+                <input class="problem" type="text" placeholder="write your problem" required>
+                <button class="btn" type="submit">SEND</button>
+              </div>
+             
+              <div class="icons">
+                <i style="font-size:25px;" class="fa-brands fa-facebook-f"></i>
+                <i  style="font-size:25px;" class="fa-brands fa-twitter"></i>
+                <i style="font-size:25px;"  class="fa-brands fa-linkedin"></i>
+                <i style="font-size:25px;"  class="fa-brands fa-github"></i>
+              </div>
+            </div>
+                 </div>
+          <div class="footer-bottom">
+            &copy; BlogFusion.com | Designed by aaryan meena,vikas pal,anurag singh
+        </div>
+                </div>
+                </div>  
+
+
+
+                 
+</body>
+
+<script src="useimage.js"></script>
+
+
+<script src="searchbar.js">    </script>
+
+<script src="dropdown.js">
+              
+
+</script>
+
+<script src="authloginsignup.js">
+ 
+           
+</script>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://kit.fontawesome.com/cb02f431d6.js" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+<script src="searchbar.js">    </script>
+
+
+<script>
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Function to check if all images are loaded
+    function allImagesLoaded() {
+        const images = document.querySelectorAll('#vi-preview-content img');
+        return Array.from(images).every(img => img.complete);
+    }
+
+   
+
+    // Function to check if content is fully loaded
+    function checkContentLoaded() {
+        if ( allImagesLoaded()) {
+            // Hide loader and show content
+            document.querySelector('.loader').style.display = 'none';
+            document.querySelector('.blogcontentappear').style.display = 'flex';
+        } else {
+            // Retry checking if not all content is loaded
+            setTimeout(checkContentLoaded, 100); // Check every 100ms
+        }
+    }
+
+    // Start checking when DOM content is loaded
+    checkContentLoaded();
+});
+
+
+
+
+
+// Function to get query parameters from URL
+function getQueryParams() {
+const params = new URLSearchParams(window.location.search);
+console.log(" param title after preview button ",params.get('postid'));
+
+return {
+postid: params.get('postid')
+
+};
+}
+
+// Function to display the preview
+
+const params = getQueryParams();
+
+
+let blogpostid = decodeURIComponent(params.postid);
+// let blogpostid = "66b1265447dbbc070ecddf55";
+
+
+let likes;
+ const GETBLOGPOST_API =  BASE_URL + "/blog/getpost";
+  const  GETALLLIKEOFAPOST_API = BASE_URL + "/like/getlikesofapost"
+   const  GETALLCOMMENTOFAPOST_API = BASE_URL + "/like/getcommentofapost"
+let userId;
+ async function fetchblogpost(postid) {
+  
+                    authloading = true;
+                   showloadingtoast(authloading);
+         try{
+                console.log("postidis:",postid)
+               const response = await  apiconnector("POST",GETBLOGPOST_API,{postid}, {
+            "Content-Type": "multipart/form-data",
+            Authorization:`Bearer${token}`}  )
+
+               console.log("SENDOTP API RESPONSE............", response)
+               console.log(response.data.success)
+
+             
+                if (!response.data.success) {
+
+                 
+                  throw new Error(response.data.message)
+                } 
+                  
+                 document.querySelector('.vi-profile-image').src = response.data.blogpostresult.author.profileimage;
+                 document.querySelector('.vi-authorname').innerText = response.data.blogpostresult.author.username;  
+                document.getElementById('vi-preview-title').innerText = response.data.blogpostresult.title;
+                document.getElementById('vi-preview-content').innerHTML = response.data.blogpostresult.content;
+                document.querySelector('.an-publish').innerText = `published on : ${formatDate(response.data.blogpostresult.createdat)}`;  
+                document.querySelector('.an-update').innerText = `Last update on : ${formatDate(response.data.blogpostresult.createdat)}`; 
+                document.querySelector('.an-allviews-span').innerText =  ` ${response.data.blogpostresult.views}  Views`  
+                userId = response.data.blogpostresult.author._id;
+                toastr.success('Your post is loaded successfully.');
+
+         }catch(error){
+                       
+        
+            toastr.error('Oops! faild to show blog. Please try again.', 'Error');
+        
+
+         }
+         authloading = false;
+         showloadingtoast(authloading);
+
+
+
+ }
+
+ document.querySelector('.vi-authorname').addEventListener("click",()=>{
+  console.log("click listnerbhdcu",userId);
+  const encodedUserId = encodeURIComponent(userId);
+  window.location.href = `userprofile.html?userId=${encodedUserId}`;
+})
+
+ async function fetchalllikes(postid) {
+
+try{
+console.log("postidis:",postid)
+const response = await  apiconnector("POST",GETALLLIKEOFAPOST_API,{postid},  )
+
+console.log("SENDOTP API RESPONSE............", response)
+console.log(response.data.success)
+
+
+if (!response.data.success) {
+
+
+throw new Error(response.data.message)
+} 
+  console.log(" function ke andar all likes:",response.data.alllikes)
+  
+document.querySelector(".an-alllike-span").innerText = `${ response.data.alllikes} likes`
+toastr.success('get total likes successfully.');
+
+}catch(error){
+     
+
+toastr.error('Oops! faild to show blog. Please try again.', 'Error');
+
+
+}
+
+
+
+
+}
+
+
+
+async function fetchallcomment(postid) {
+
+try{
+console.log("postidis:",postid)
+const response = await  apiconnector("POST",GETALLCOMMENTOFAPOST_API,{postid},  )
+
+console.log("SENDOTP API RESPONSE............", response)
+console.log(response.data.success)
+
+
+if (!response.data.success) {
+
+
+throw new Error(response.data.message)
+} 
+  console.log(" function ke andar all likes:",response.data.alllikes)
+  
+document.querySelector(".an-allcomment-span").innerText = `${ response.data.allcomment} comments`
+toastr.success('get all comment successfully.');
+
+}catch(error){
+     
+
+toastr.error('Oops! faild to show blog. Please try again.', 'Error');
+
+
+}
+
+}
+
+
+
+fetchblogpost(blogpostid);
+
+fetchalllikes(blogpostid);
+
+fetchallcomment(blogpostid);
+// console.log(" sari likes hai:",likes);
+
+
+
+const commenticonbutton = document.getElementById("vi-comment-icon");
+let commentboxopen = false;
+commenticonbutton.addEventListener('click',()=>{
+                   if(!commentboxopen){
+                            document.querySelector('.an-main-commentbox1').style.display = "flex",
+                            commenticonbutton.style.color = "red"
+                            commentboxopen = true
+                   } else if(commentboxopen){
+                             document.querySelector('.an-main-commentbox1').style.display = "none",
+                            commenticonbutton.style.color = "#53AA51"
+                            commentboxopen = false;
+                   }
+             
+})
+
+let islikeornot;
+
+const ISLIKE_API = BASE_URL + "/like/islike"
+const LIKE_API = BASE_URL + "/like/like"
+const UNLIKE_API = BASE_URL + "/like/unlike"
+
+
+ async  function unlike(postid,userid){
+               
+  try{
+console.log("postidis:",postid)
+const response = await  apiconnector("POST",UNLIKE_API,{postid,userid}, )
+
+// console.log("SENDOTP API RESPONSE............", response)
+// console.log(response.data.success)
+
+
+if (!response.data.success) {
+
+
+throw new Error(response.data.message)
+} 
+  console.log(" unlikes  hogi:",)
+  
+    
+  
+toastr.success(' unlike successfully.');
+
+}catch(error){
+     
+
+toastr.error('Oops! faild to unlike blog. Please try again.', 'Error');
+
+
+}
+
+ }
+
+ async  function like(postid,userid){
+                
+  try{
+console.log("postidis:",postid)
+const response = await  apiconnector("POST",LIKE_API,{postid,userid}, )
+
+// console.log("SENDOTP API RESPONSE............", response)
+// console.log(response.data.success)
+
+
+if (!response.data.success) {
+
+
+throw new Error(response.data.message)
+} 
+  console.log(" function ke  likes  hogi:",)
+  
+    
+  
+toastr.success('like successfully.');
+
+}catch(error){
+     
+
+toastr.error('Oops! faild to show blog. Please try again.', 'Error');
+
+
+}
+              
+  }
+
+
+
+  async  function islike(postid,userid){
+
+
+    try{
+// console.log("postidis:",postid)
+const response = await  apiconnector("POST",ISLIKE_API,{postid,userid}, )
+
+console.log("SENDOTP API RESPONSE............", response)
+// console.log(response.data.success)
+
+
+if (!response.data.success) {
+
+
+throw new Error(response.data.message)
+} 
+  console.log(" function ke  likes hai ya nhi:",response.data.islike)
+  
+    
+   islikeornot = response.data.islike;
+  //  console.log("like hy ki no:",islikeornot)
+toastr.success('islike  status check successfully.','success');
+
+}catch(error){
+     
+
+toastr.error('Oops! faild to show blog. Please try again.', 'Error');
+
+
+}
+              
+  }
+
+
+
+
+const likeiconbutton = document.getElementById("vi-like-icon");
+
+ 
+ async function  handleislikestatus() {
+                   
+                       await  islike(blogpostid,userdetails._id);
+
+                       if(islikeornot){
+                                  
+                               likeiconbutton.style.color = "red"
+                       } else if(!islikeornot){
+                                  
+                                
+                          }
+    
+  }
+  handleislikestatus();
+      
+  likeiconbutton.addEventListener('click', async()=>{
+                      
+                   if(islikeornot){
+                                             await   unlike(blogpostid,userdetails._id);
+                                      
+                                         likeiconbutton.style.color = "black"
+                                         console.log(" vikas ne unlike kari hai abhi",islikeornot)
+                                         fetchalllikes(blogpostid);
+                                         islikeornot=false
+                     } else if(!islikeornot){
+                                     
+
+                                    await  like(blogpostid,userdetails._id);
+                                        console.log(" vikas ne like kari hai abhi",islikeornot)
+                                       fetchalllikes(blogpostid);
+                                      likeiconbutton.style.color = "red"
+                                     islikeornot=true
+                       }
+                 
+  })
+
+
+
+
+
+
+ const ADDCOMMENT_API = BASE_URL + "/like/addcomment"
+ const GETCOMMENTS_API = BASE_URL + "/like/getcomments"
+ 
+ let allcommentofpost;
+
+
+
+ async  function fetchcomments(postid){
+                       
+                     
+try{
+
+const response = await  apiconnector("POST",GETCOMMENTS_API,{postid},  )
+
+console.log("SENDOTP API RESPONSE............", response)
+console.log(response.data.success)
+
+
+if (!response.data.success) {
+
+
+throw new Error(response.data.message)
+} 
+  console.log(" function ke andar all comments agye the:",response.data.allcomments)
+     allcommentofpost = response.data.allcomments;
+toastr.success('get all commented successfully.');
+
+}catch(error){
+     
+
+toastr.error('Oops! faild to sget all comemnt of blog. Please try again.', 'Error');
+
+
+}
+ }
+
+ let newcomment;
+async function addcomment(comment1,postid,userid) {
+                              
+  try{
+
+const response = await  apiconnector("POST",ADDCOMMENT_API,{comment1,postid,userid}, )
+
+
+
+
+if (!response.data.success) {
+
+
+throw new Error(response.data.message)
+} 
+ 
+  
+    
+newcomment = response.data.commentresponse;
+toastr.success('comment successfully.');
+
+
+
+}catch(error){
+     
+
+toastr.error('Oops ! Faild to add comment', 'Error');
+
+
+}
+
+}
+
+async function handleshowallcomments(blogpostid){
+                      
+                     await fetchcomments(blogpostid);
+
+                     allcommentofpost.map((comment,index)=>{
+                             
+                      console.log(" comment array is:",comment);
+
+               const commentDiv = document.createElement('div');
+            commentDiv.classList.add('an-one-comment');
+         
+
+                  const imgNameDiv = document.createElement('div');
+                   imgNameDiv.classList.add('an-comment-img-name');
+                   commentDiv.appendChild(imgNameDiv);
+
+                    const commentImg = document.createElement('img');
+                    commentImg.classList.add('an-comment-img');
+                     commentImg.src = comment.user.profileimage; 
+                     imgNameDiv.appendChild(commentImg);
+                    
+
+                     const byUsersDiv = document.createElement('div');
+                     byUsersDiv.classList.add('an-comment-byusers');
+                     imgNameDiv.appendChild(byUsersDiv);
+
+                   const userNameP = document.createElement('p');
+                   userNameP.classList.add('an-comment-p');
+                     userNameP.textContent = comment.user.username;
+                     byUsersDiv.appendChild(userNameP);
+                  
+
+                 const userCommentP = document.createElement('p');
+                  userCommentP.classList.add('an-realcomment');
+                        userCommentP.textContent = comment.commentdesc;
+                        byUsersDiv.appendChild(userCommentP);
+
+
+
+                      document.querySelector('.an-main-commentbox2').appendChild(commentDiv);
+
+
+                                 
+                     })
+
+
+  
+  
+   }
+
+ async function handleaddcomment(comment){
+                      
+                    await addcomment(comment,blogpostid,userdetails._id);
+
+                    const commentDiv = document.createElement('div');
+                     commentDiv.classList.add('an-one-comment');
+         
+
+                  const imgNameDiv = document.createElement('div');
+                   imgNameDiv.classList.add('an-comment-img-name');
+                   commentDiv.appendChild(imgNameDiv);
+
+                    const commentImg = document.createElement('img');
+                    commentImg.classList.add('an-comment-img');
+                     commentImg.src = newcomment.user.profileimage; 
+                     imgNameDiv.appendChild(commentImg);
+                    
+
+                     const byUsersDiv = document.createElement('div');
+                     byUsersDiv.classList.add('an-comment-byusers');
+                     imgNameDiv.appendChild(byUsersDiv);
+
+                   const userNameP = document.createElement('p');
+                   userNameP.classList.add('an-comment-p');
+                     userNameP.textContent = newcomment.user.username;
+                     byUsersDiv.appendChild(userNameP);
+                  
+
+                 const userCommentP = document.createElement('p');
+                  userCommentP.classList.add('an-realcomment');
+                        userCommentP.textContent = newcomment.commentdesc;
+                        byUsersDiv.appendChild(userCommentP);
+
+
+
+                        const commentBox = document.querySelector('.an-main-commentbox2');
+
+
+                          commentBox.insertBefore(commentDiv, commentBox.firstChild);
+                      
+              
+
+ }
+
+  const commentform = document.querySelector('.an-comment-form');
+
+  commentform.addEventListener('submit', async (e)=>{
+                         
+                    e.preventDefault();
+                         
+
+                    let value = document.querySelector('.an-comment-input').value;
+                 await   handleaddcomment(value);
+
+               
+  })
+
+handleshowallcomments(blogpostid);
+
+
+const VIEWCOUNT_API=BASE_URL+"/like/setview"
+// const GETALLVIEW_API = BASE_URL + "like/allview"
+
+async function incrementViewCount(postid) {
+                                   
+  try{
+// console.log("postidis:",postid)
+const response = await  apiconnector("POST",VIEWCOUNT_API,{postid}, )
+
+console.log("SENDOTP API RESPONSE............", response)
+// console.log(response.data.success)
+
+
+if (!response.data.success) {
+
+
+throw new Error(response.data.message)
+} 
+
+  
+    
+     document.querySelector('.an-allviews-span').innerText =  ` ${response.data.blogpostresult.views}  Views` 
+toastr.success('view count successfully.','success');
+
+}catch(error){
+     
+
+toastr.error('Oops! faild to show blog. Please try again.', 'Error');
+
+
+}
+
+} 
+
+
+
+window.onload = function() {
+    setTimeout(function() {
+        // Make the API call to increment the view count after 30 seconds
+        incrementViewCount(blogpostid);
+    }, 20000); // 30000 ms = 30 seconds
+};
+
+
+
+
+
+
+
+</script>            
+            
+</html>

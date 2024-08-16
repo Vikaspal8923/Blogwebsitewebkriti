@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlogFusion</title>
+     <link href="blog.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
+
+</head>
+<body>
+    
+        <header class=" header-part">
+
+        <div class="header-logo">
+            <img class="logo-image" src="bloglogo.png" alt="Logo">
+            <p class="blogwebsitname">BlogFusion</p>
+        </div>
+
+    
+        <nav class="header-navbar">
+
+          <div>
+            <a class="navbar-parts1" href="index.html">Home</a>
+          </div>
+           
+           <div>
+            <a class="navbar-parts2" href="aboutus.html">About</a>
+
+           </div>
+            
+            <div>
+                <a  class="navbar-parts3" href="blog.html">Blogs</a>
+            </div>
+            
+             <div>
+                <a class="navbar-parts4" href="quill.html">Publish blog</a>
+             </div>
+            
+        </nav>
+         
+          
+        <div class="auth-buttons">
+                     
+                   <div class="search-section">
+                          <div class="searchbox-div"> 
+                                    <input id="searchbox" type="search"></input>
+                          </div>
+                    <i id="search-icon" class="fa-solid fa-magnifying-glass"></i>
+
+                   </div>
+                      
+                   <div class="aa-all-search-blog">
+
+                    <!-- <button class="close-button">
+                      close
+                    </button> -->
+
+                   </div>
+
+                <div class="login-signup-button">  
+
+                    <button id="loginbutton" class="loginbutton">Login</button>
+                    <button id="signupbutton" class="signupbutton">Sign up</button>
+
+                </div>
+             
+                 <div class="profile-section" >
+
+                          <button class="drop-down">
+
+                          
+                          <img  class="profile-image" alt="profileimage">
+
+
+                          <div>
+                            <i id="drop-down-icon" class="fa-solid fa-caret-down"></i>
+                          </div> 
+
+                          <div class="dashboard-logout">
+                                                      <a class="dashboard-button"  >
+                                                        <i class="fa-solid fa-gauge"></i>
+                                                        Dashboard</a>
+                                                       <div class="logout-button">
+                                                        <i class="fa-solid fa-right-from-bracket"></i>
+                                                        Logout</div>
+                           </div>
+
+                                        
+
+                        </button>
+                                
+                                                  
+                                              
+                                 
+                           
+                 </div>
+
+                    
+        </div>
+
+           
+        </header>
+
+        <div class="main-auth-section">
+                  <div class="main-body">
+                       <div class="main-auth" >
+                      
+  
+                          <div  id="login" style="width: 100%; flex-direction: column; justify-content: center; align-items: center;">
+
+                            <div id="hide-login-signup" >
+                                      
+                              <i id="hide-login-icon" style=" cursor: pointer;  font-size: 30px; font-weight: bolder; color: red;" class="fa-solid fa-xmark"></i>
+                                        
+      
+                            </div>
+                                 <div class="header-logo2">
+                                        <img class="logo-image2" src="bloglogo.png" alt="Logo">
+                                        <p class="blogwebsitname2">BlogFusion</p>
+                                 </div>
+             
+                                <div class="login-div-one">Welcome back to Bloggr</div> 
+
+                 
+
+                               <div class="login-div-two">
+                                               <form class=" login-form">
+                                          
+                                               <div class="login-form-div-one">
+                                                          <label class="form-label-one" for="email" >Email</label>
+                                                          <input class="loginemail" type="text" id="email" name="email" placeholder="Enter your email" required  >
+                                               </div>
+
+                                               <div class="login-form-div-two"> 
+                                                          <label  class="form-label-two" for="password" >Password</label>
+                                                          <input class="loginpassword" type="text" id="password" name="password" placeholder="Enter your password" required  >
+                                               </div>
+                                                <div class="login-form-div-three">
+                                                          <button type="button" class="forgot-button">Forget_password?</button>
+                                                          <button type="submit" id="signupbutton2" class="forgot-button">Sign up</button>
+                                                          
+                                                </div>
+
+                                                <button  class="login-form-button" type="submit">Sign In</button>
+                                             
+                                                </form>
+
+
+
+                                 
+                                  </div>
+
+                          </div>
+                 
+             
+                    
+                          <div id="signup" style="width: 100%; flex-direction: column; justify-content: center; align-items: center;" >
+
+               
+       
+                   <!-- <div class="header-logo2">
+                       <img class="logo-image2" src="bloglogo.png" alt="Logo">
+                       <p class="blogwebsitname2">BlogFusion</p>
+                   </div> -->
+                       <div id="hide-login-signup" >
+                                      
+                        <i id="hide-signup-icon" style=" cursor: pointer; font-size: 30px; font-weight: bold; color: red;" class="fa-solid fa-xmark"></i>
+                                  
+
+                       </div>
+                     <div class="signup-div-one">Be a Voice in Our Blogging Community: Register Now!</div> 
+ 
+                
+ 
+                     <div class="signup-div-two">
+                                    <form class="signup-form">   
+
+                                                    <div class="signup-firstname-lastname">
+
+                                                       <div class="signup-form-firstname">
+                                                           <label class="form-label-one"  for="firstname" >Firstname</label>
+                                                           <input type="text" id="firstname" name="firstname" placeholder="Enter your firstname" required  >
+                                                       </div>
+
+                                                        <div class="signup-form-lastname"> 
+                                                           <label id="signuplastname" class="form-label-two" for="lastname" >Lastname</label>
+                                                           <input type="text" id="lastname" name="lastname" placeholder="Enter your lastname" required  >
+                                                         </div>
+                                                    </div>
+
+                                                    <div class="signup-form-div-two">
+                                                       <label class="form-label-one" for="email" >Email</label>
+                                                       <input class="signupemail" type="text" id="email" name="email" placeholder="Enter your email" required  >
+                                                   </div>
+
+                                                   <div class="signup-form-div-three">
+                                                       <label class="form-label-one" for="mobilenumber" >Mobile number</label>
+                                                       <input type="text" id="mobilenumber" name="mobilenumber" placeholder="Enter your mobile number" required  >
+                                                   </div>
+
+                                                   <div class="signup-password-confirm">
+                                                       <div class="signup-form-password">
+                                                           <label class="form-label-one" for="signpassword" >Password</label>
+                                                           <input type="text" id="signpassword" name="password" placeholder="Enter password" required >
+                                                       </div>
+
+                                                       <div class="signup-form-confirm">
+                                                           <label id="signupconfirmpassword" class="form-label-one" for="confirmpassword" > Confirm password</label>
+                                                           <input type="text" id="confirmpassword" name="confirmpassword" placeholder="Enter confirm password" required  >
+                                                       </div>
+                                                   </div>
+
+
+                                                     
+
+                                                
+                                                 
+                                                   <div class="signup-form-div-login" style=" display: flex; flex-direction: row; justify-content: end;">
+                                                 
+                                                    <button type="button" id="loginbutton2" class="forgot-button">Login</button>
+                                                    
+                                                   </div>
+                                                  <button   class="signup-form-button" type="submit">Create Account</button>
+                                               
+                                    </form>
+ 
+ 
+ 
+                                   
+                     </div>
+
+ 
+                          </div>
+
+
+                          <div class="otp-container" id="otp-container">
+
+                            <div id="hide-verify-email" >
+                                      
+                              <i id="hide-email-icon" style=" cursor: pointer; font-size: 30px; font-weight: bold; color: red;" class="fa-solid fa-xmark"></i>
+                                        
+      
+                             </div>
+                              <div class="verify-email-div">  Verify email </div>
+
+                              <div  class="verify-email-title"> Enter the 6-digit verification code that was sent to your email.
+
+                              </div>
+                            
+
+                            <div class="inputfield">
+                              <input type="number" maxlength="1" class="input" disabled />
+                              <input type="number" maxlength="1" class="input" disabled />
+                              <input type="number" maxlength="1" class="input" disabled />
+                              <input type="number" maxlength="1" class="input" disabled />
+                              <input type="number" maxlength="1" class="input" disabled />
+                              <input type="number" maxlength="1" class="input" disabled />
+                             
+                            </div>
+                                    <div style="width: 100%;">
+                                            <button   class="verify-email-button">Verify email</button>
+                                    </div>
+                          </div>
+
+                        </div>
+
+                 </div>   
+
+        </div>
+
+
+           
+        <div class="vi-allblogs-main">
+
+                      <div class="vi-allblogs-heading">All Blogs</div>
+
+                      <div   class="all-blogs" >
+                               
+                      </div>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <div class="home-footer">
+            <div class="footer">
+
+      <div class="footer-row">
+
+        <div class="footer-col">
+          <h4 style="font-family: sans-serif; font-weight: bold; font-size: 25px;">Info</h4>
+          <ul class="links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Compressions</a></li>
+            <li><a href="#">Customers</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">Collection</a></li>
+            <li><a href="#">pricing</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 style="font-family: sans-serif; font-weight: bold; font-size: 25px;">Explore</h4>
+          <ul class="links">
+            <li><a href="#">Free Designs</a></li>
+            <li><a href="#">Latest Designs</a></li>
+            <li><a href="#">Themes</a></li>
+            <li><a href="#">Popular Designs</a></li>
+            <li><a href="#">Art Skills</a></li>
+            <li><a href="#">New Uploads</a></li>
+            <li><a href="#">old uploads</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 style="font-family: sans-serif; font-weight: bold; font-size: 25px;">Legal</h4>
+          <ul class="links">
+            <li><a href="#">Customer Agreement</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">GDPR</a></li>
+            <li><a href="#">Security</a></li>
+            <li><a href="#">Testimonials</a></li>
+            <li><a href="#">Media Kit</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 style="font-family: sans-serif; font-weight: bold; font-size: 25px;"> contact us</h4>
+          <p>
+            welcome to BlogFusion,
+            your number 1 source blogging 
+            with an emphasis on quality, reliability, and uniqueness
+
+          </p>
+          <p>
+            <i class="fa-solid fa-map-marker-alt"></i> Morena link Road ,Gwalior ,Madhya Pradesh
+            
+          </p>
+          
+          
+          <div>
+            <input class="mail" type="text" placeholder="Your email" required>
+            <input class="problem" type="text" placeholder="write your problem" required>
+            <button class="btn" type="submit">SEND</button>
+          </div>
+         
+          <div class="icons">
+            <i style="font-size:25px;" class="fa-brands fa-facebook-f"></i>
+            <i  style="font-size:25px;" class="fa-brands fa-twitter"></i>
+            <i style="font-size:25px;"  class="fa-brands fa-linkedin"></i>
+            <i style="font-size:25px;"  class="fa-brands fa-github"></i>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; BlogFusion.com | Designed by aaryan meena,vikas pal,anurag singh
+    </div>
+            </div>
+        </div>  
+
+
+
+</body>
+
+
+
+<script src="useimage.js">
+              
+</script>
+
+
+
+<script src="dropdown.js">
+              
+
+</script>
+
+<script src="authloginsignup.js">
+ 
+           
+</script>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://kit.fontawesome.com/cb02f431d6.js" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+
+
+<script src="searchbar.js"></script>  
+
+<script>
+
+let allPostByallUser;
+const GETALLPOSTBYALLUSER_API = BASE_URL+'/blog/allpostbyall'
+
+async function getAllPostByallUser(){
+  authloading = true;
+  showloadingtoast(authloading);
+
+  try {
+   const response = await apiconnector("GET",GETALLPOSTBYALLUSER_API);
+
+   console.log("userAllPost API response ..........",response);
+
+    if(!response){
+         throw new Error(response.data.message);
+    }
+
+    allPostByallUser = response.data.randomBlogs;
+
+    console.log(allPostByallUser)
+      toastr.success('all blog aa gye hai ','succes');
+    
+  } catch (error) {
+    console.log(error)
+    toastr.error(" all post by userId nhi aayi hai",'Error');
+  }
+  authloading = false;
+  showloadingtoast(authloading);
+}
+
+async function handleallPostByallUser(){
+     await getAllPostByallUser();
+     allPostByallUser.map((post,index)=>{
+ 
+       console.log('each post data ',post);
+
+       
+        const allblogs = document.querySelector('.all-blogs');
+       
+        
+
+            const mainDiv = document.createElement('div');
+            mainDiv.classList.add('user-blog');
+            
+
+            const imgElement = document.createElement('img');
+            imgElement.classList.add('aa-img');
+            imgElement.src = post.images[0];
+            mainDiv.appendChild(imgElement);
+
+            const tittle  = document.createElement('a');
+            tittle.classList.add('aa-title');
+            tittle.innerText = post.title;
+            mainDiv.appendChild(tittle);
+
+          const LikeMainDiv = document.createElement('div');
+          LikeMainDiv.classList.add('aa-like-comment')
+          mainDiv.appendChild(LikeMainDiv);
+
+
+              const ptaglike = document.createElement('p');
+              ptaglike.classList.add('aa-like-p')
+              LikeMainDiv.appendChild(ptaglike);
+                 
+                  const like = document.createElement('i');
+                  like.classList.add('fa-solid' ,'fa-thumbs-up')
+                  like.style.fontSize = '30px';
+                  ptaglike.appendChild(like);
+
+                  const spandiv = document.createElement('span');
+                  like.classList.add('.an-alllike-span')
+                  spandiv.style.fontSize = '15px';
+                  spandiv.innerText =  `${post.like.length} likes`
+                  console.log(" like hai sari",post.like.length)
+                  ptaglike.appendChild(spandiv);
+                  
+              
+              
+              const ptagcomment = document.createElement('p');
+              ptagcomment.classList.add('aa-comment-p')
+              LikeMainDiv.appendChild(ptagcomment);
+                 
+                  const Comment = document.createElement('i');
+                  Comment.classList.add('fa-solid' ,'fa-comment')
+                  Comment.style.fontSize = '30px';
+                  ptagcomment.appendChild(Comment);
+
+                  const spancommnet = document.createElement('span');
+                  like.classList.add('.an-allcomment-span')
+                  spancommnet.style.fontSize = '15px';
+                  spancommnet.innerText =  `${post.comment.length} comments`
+                  console.log(" comment hai sari",post.comment.length)
+                  ptagcomment.appendChild(spancommnet);
+
+
+         
+
+            allblogs.appendChild(mainDiv);
+
+
+            tittle.href = `previewblog.html?postid=${post._id}`
+     })
+    
+  
+}
+    handleallPostByallUser();
+
+</script>
+
+
+        
+  
+
+</html>
