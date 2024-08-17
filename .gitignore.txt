@@ -1,1 +1,2 @@
 /backened/.env
+/backened/node_modules
