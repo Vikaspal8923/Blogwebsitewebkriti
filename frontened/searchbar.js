@@ -5,7 +5,7 @@ let searchbaropen = false
  const blogPostsContainer = document.querySelector('.aa-all-search-blog');
  console.log(searchbar)
 
-
+//
  let allPostByallUser2;
  const GETALLPOSTBYALLUSER_API2 = 'https://blogfusion-backened8923.onrender.com/api/v1/blog/allpostbyall'
  
