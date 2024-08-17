@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 /// BASE_URL
 
-const BASE_URL = 'http://localhost:9060/api/v1'
+const BASE_URL = 'https://blogfusion-backened8923.onrender.com/api/v1'
 
 
   const  SENDOTP_API= BASE_URL + "/auth/sendotp";

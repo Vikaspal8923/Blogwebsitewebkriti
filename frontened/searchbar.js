@@ -7,7 +7,7 @@ let searchbaropen = false
 
 
  let allPostByallUser2;
- const GETALLPOSTBYALLUSER_API2 = `http://localhost:9060/api/v1/blog/allpostbyall`
+ const GETALLPOSTBYALLUSER_API2 = 'https://blogfusion-backened8923.onrender.com/api/v1/blog/allpostbyall'
  
  async function getAllPostByallUser1(){
   //  authloading = true;
