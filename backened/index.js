@@ -27,7 +27,7 @@ const  {cloudinaryconnect} = require("./config/cloudinary");
 const fileupload = require("express-fileupload");
 
 //port intialisation
-const PORT = process.env.PORT || 7005
+const PORT = process.env.PORT 
 
 //db connection call
 
