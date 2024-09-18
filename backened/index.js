@@ -40,7 +40,7 @@ app.use(express.json());
 app.use(
      
       cors({
-               origin: 'https://blogfusion8923-git-main-vikaspal8923s-projects.vercel.app',
+               origin: 'https://blogfusion123.vercel.app',
                credentials:true
       })
 )
