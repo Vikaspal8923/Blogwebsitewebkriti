@@ -70,21 +70,29 @@ app.use('/api/v1', sitemapRoutes); // Use the sitemap route
 
 
 app.get('/sitemap.xml', async (req, res) => {
-     try {
+    try {
+        // Fetch the dynamic sitemap from the backend
+        console.log(" sit map start")
+        const response = await fetch('https://blogfusion-backened8923.onrender.com/sitemap.xml');
+        console.log(" sit map start 2")
+        // Check if the response is ok (status code in the range 200-299)
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+            
+        // Read the sitemap data
+        const sitemap = await response.text();
 
-        console.log(" site map recieved ");
-         const response = await fetch('https://blogfusion-backened8923.onrender.com/sitemap.xml');
-         console.log(" site map recieved 2 ");
-         const data = await response.text();
-         console.log(" site map recieved 3 ");
-         res.header('Content-Type', 'application/xml');
-         res.send(data);
-         console.log(" site map recieved 3");
-     } catch (error) {
-         console.error('Error fetching sitemap:', error);
-         res.status(500).send('Error fetching sitemap');
-     }
- });
+        // Set the appropriate headers for XML content
+        console.log(" sit map start 3")
+        res.setHeader('Content-Type', 'application/xml');
+        res.status(200).send(sitemap);
+    } catch (error) {
+        console.error('Error fetching sitemap:', error);
+        res.status(500).send('Error generating sitemap');
+    }
+});
+
  
 
 
