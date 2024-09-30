@@ -8,6 +8,7 @@ const router = express.Router();
 router.get('/sitemap.xml', async (req, res) => {
     try {
         // Create a stream to write to
+        console.log('Sitemap request received'); // Debug log
         const sitemapStream = new SitemapStream({ hostname: 'https://blogfusion123.vercel.app' });
 
         // Fetch all blog posts from your database
