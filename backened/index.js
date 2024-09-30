@@ -40,7 +40,11 @@ app.use(express.json());
 app.use(
      
       cors({
-               origin: process.env.FRONTENED_HOST,
+               origin: [
+                'https://blogfusion123.vercel.app',
+                'http://127.0.0.1:5500'
+                       
+                       ],
                credentials:true
       })
 )
