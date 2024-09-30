@@ -66,11 +66,13 @@ app.use("/api/v1/profile",profileroutes)
 app.use("/api/v1/like",likeroutes);
 app.use("/api/v1/category",categoryroutes);
 app.use('/api/v1/blog',blogpostroutes);
-app.use( sitemapRoutes); // Use the sitemap route
+app.use('/api/v1', sitemapRoutes); // Use the sitemap route
 
 
 app.get('/sitemap.xml', async (req, res) => {
      try {
+
+        console.log(" site map recieved ");
          const response = await fetch('https://blogfusion-backened8923.onrender.com/sitemap.xml');
          const data = await response.text();
          res.header('Content-Type', 'application/xml');
@@ -82,15 +84,6 @@ app.get('/sitemap.xml', async (req, res) => {
  });
  
 
-//default route
-app.get("/",(req,res)=>{
-       
-     console.log(' GET  request recieved');
-     return res.json({
-              success:true,
-              message:"your server is up" 
-     });
-})
 
 
 app.listen(PORT,()=>{
