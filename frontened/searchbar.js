@@ -6,7 +6,7 @@ let searchbaropen = false
  console.log(searchbar)
 
 //
- let allPostByallUser2;
+ let allPostByallUser2;                
  const GETALLPOSTBYALLUSER_API2 = 'https://blogfusion-backened8923.onrender.com/api/v1/blog/allpostbyall'
  
  async function getAllPostByallUser1(){
