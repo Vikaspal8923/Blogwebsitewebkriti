@@ -464,19 +464,19 @@ exports.deletePost = async (req,res) =>{
 
       
 
-       const userid =  req.user.id;
+      //  const userid =  req.user.id;
   
 
 
-       const userresult = await User.findById(userid);
+      //  const userresult = await User.findById(userid);
 
 
-       if(!userresult){
-            return res.status(400).json({
-                 success:false,
-                 message: "user-not-exist"
-            })
-       }
+      //  if(!userresult){
+      //       return res.status(400).json({
+      //            success:false,
+      //            message: "user-not-exist"
+      //       })
+      //  }
    
 
 
@@ -490,7 +490,7 @@ exports.deletePost = async (req,res) =>{
              })
             }
 
-            console.log(' after blogpost result ')
+            // console.log(' after blogpost result ')
 
 
 
