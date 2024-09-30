@@ -22,7 +22,7 @@ const router = express.Router();
 
      router.post("/createpost",auth,createblogpost);
      router.post("/updatepost",auth,updateblogpost);
-     router.post("/getpost",auth,getblogpost); 
+     router.post("/getpost",getblogpost); 
      router.get("/getlatest",getlatestblogpost);
      router.get("/gettrending",getTrendingBlogPosts);
      router.get("/getrandom",getRandomBlogPosts);
