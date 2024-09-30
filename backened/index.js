@@ -68,6 +68,20 @@ app.use("/api/v1/category",categoryroutes);
 app.use('/api/v1/blog',blogpostroutes);
 app.use( sitemapRoutes); // Use the sitemap route
 
+
+app.get('/sitemap.xml', async (req, res) => {
+     try {
+         const response = await fetch('https://blogfusion-backened8923.onrender.com/sitemap.xml');
+         const data = await response.text();
+         res.header('Content-Type', 'application/xml');
+         res.send(data);
+     } catch (error) {
+         console.error('Error fetching sitemap:', error);
+         res.status(500).send('Error fetching sitemap');
+     }
+ });
+ 
+
 //default route
 app.get("/",(req,res)=>{
        
