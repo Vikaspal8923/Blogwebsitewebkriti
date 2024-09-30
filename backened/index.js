@@ -66,7 +66,7 @@ app.use("/api/v1/profile",profileroutes)
 app.use("/api/v1/like",likeroutes);
 app.use("/api/v1/category",categoryroutes);
 app.use('/api/v1/blog',blogpostroutes);
-app.use('/', sitemapRoutes); // Use the sitemap route
+app.use('/api/v1', sitemapRoutes); // Use the sitemap route
 
 //default route
 app.get("/",(req,res)=>{
