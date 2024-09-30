@@ -74,9 +74,12 @@ app.get('/sitemap.xml', async (req, res) => {
 
         console.log(" site map recieved ");
          const response = await fetch('https://blogfusion-backened8923.onrender.com/sitemap.xml');
+         console.log(" site map recieved 2 ");
          const data = await response.text();
+         console.log(" site map recieved 3 ");
          res.header('Content-Type', 'application/xml');
          res.send(data);
+         console.log(" site map recieved 3");
      } catch (error) {
          console.error('Error fetching sitemap:', error);
          res.status(500).send('Error fetching sitemap');
